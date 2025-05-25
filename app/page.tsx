@@ -6,10 +6,11 @@ import { Input } from "@/components/ui/input"
 import FeaturedPost from "@/components/featured-post"
 import ProductCard from "@/components/product-card"
 import CategoryPill from "@/components/category-pill"
+import UserList from "@/components/UserList"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
@@ -59,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* Trending Products */}
-      <section className="py-12 px-4 md:px-8 bg-gray-50">
+      <section className="py-12 px-4 md:px-8 bg-muted">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Trending Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -89,7 +90,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center mt-8">
-            <Button asChild className="bg-black hover:bg-gray-800 text-white">
+            <Button asChild className="bg-primary hover:bg-secondary text-primary-foreground">
               <Link href="/products">View All Products</Link>
             </Button>
           </div>
@@ -100,45 +101,45 @@ export default function Home() {
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-8">Latest Articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
             <Link href="/blog/top-10-synthesizers-2025">
               <div className="relative h-48">
                 <Image src="/images/article-1.png" alt="Top 10 Synthesizers of 2025" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <span className="text-sm text-gray-500">April 20, 2025</span>
+                <span className="text-sm text-muted-foreground">April 20, 2025</span>
                 <h3 className="text-xl font-semibold mt-2">Top 10 Synthesizers of 2025</h3>
-                <p className="text-gray-600 mt-2 line-clamp-3">
+                <p className="text-muted-foreground mt-2 line-clamp-3">
                   Our comprehensive guide to the best synthesizers on the market this year, from budget-friendly options
                   to high-end professional gear.
                 </p>
               </div>
             </Link>
           </article>
-          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
             <Link href="/blog/home-studio-setup-guide">
               <div className="relative h-48">
                 <Image src="/images/article-2.png" alt="Home Studio Setup Guide" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <span className="text-sm text-gray-500">April 18, 2025</span>
+                <span className="text-sm text-muted-foreground">April 18, 2025</span>
                 <h3 className="text-xl font-semibold mt-2">Home Studio Setup Guide: From Beginner to Pro</h3>
-                <p className="text-gray-600 mt-2 line-clamp-3">
+                <p className="text-muted-foreground mt-2 line-clamp-3">
                   Everything you need to know about setting up your home studio, with recommendations for every budget
                   level.
                 </p>
               </div>
             </Link>
           </article>
-          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
             <Link href="/blog/ableton-live-12-vs-logic-pro">
               <div className="relative h-48">
-                <Image src="/images/article-3.png" alt="Ableton Live 12 vs Logic Pro" fill className="object-cover" />
+                <Image src="/abletionpic.webp" alt="Ableton Live 12 vs Logic Pro" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <span className="text-sm text-gray-500">April 15, 2025</span>
+                <span className="text-sm text-muted-foreground">April 15, 2025</span>
                 <h3 className="text-xl font-semibold mt-2">Ableton Live 12 vs Logic Pro: Which DAW Reigns Supreme?</h3>
-                <p className="text-gray-600 mt-2 line-clamp-3">
+                <p className="text-muted-foreground mt-2 line-clamp-3">
                   We compare the latest versions of two industry-standard DAWs to help you decide which is right for
                   your workflow.
                 </p>
@@ -147,13 +148,70 @@ export default function Home() {
           </article>
         </div>
         <div className="text-center mt-8">
-          <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+          <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
             <Link href="/blog">View All Articles</Link>
           </Button>
         </div>
       </section>
 
-      
+      {/* Blog Section */}
+      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8">From the Blog</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+            <Link href="/blog/universal-audio-apollo-twin-x-review">
+              <div className="relative h-48">
+                <Image src="/Universal Audio Apollo Twin X.jpg" alt="Apollo Twin X Review" fill className="object-cover" />
+              </div>
+              <div className="p-4">
+                <span className="text-sm text-muted-foreground">April 25, 2025</span>
+                <h3 className="text-xl font-semibold mt-2">Universal Audio Apollo Twin X Review</h3>
+                <p className="text-muted-foreground mt-2 line-clamp-3">
+                  We test if the Apollo Twin X lives up to the hype with improved AD/DA conversion & DSP power...
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+            <Link href="/blog/ssl-2-plus-review">
+              <div className="relative h-48">
+                <Image src="/images/related-1.png" alt="SSL 2+ Review" fill className="object-cover" />
+              </div>
+              <div className="p-4">
+                <span className="text-sm text-muted-foreground">April 20, 2025</span>
+                <h3 className="text-xl font-semibold mt-2">Solid State Logic SSL 2+ Review</h3>
+                <p className="text-muted-foreground mt-2 line-clamp-3">
+                  Professional sound on a budget with the SSL 2+ interface...
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+            <Link href="/blog/best-audio-interfaces-2025">
+              <div className="relative h-48">
+                <Image src="/images/related-2.png" alt="Best Interfaces" fill className="object-cover" />
+              </div>
+              <div className="p-4">
+                <span className="text-sm text-muted-foreground">April 15, 2025</span>
+                <h3 className="text-xl font-semibold mt-2">Best Audio Interfaces for Home Studios</h3>
+                <p className="text-muted-foreground mt-2 line-clamp-3">
+                  Discover the top audio interfaces of 2025 for every budget...
+                </p>
+              </div>
+            </Link>
+          </article>
+        </div>
+        <div className="text-center mt-8">
+          <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
+            <Link href="/blog">View All Blog</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* User List Section */}
+      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <UserList />
+      </section>
     </div>
   )
 }

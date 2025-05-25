@@ -97,7 +97,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[500px] overflow-hidden">
         <Image
@@ -216,7 +216,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             {post.relatedPosts.map((relatedPost, index) => (
               <article
                 key={index}
-                className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white"
+                className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card"
               >
                 <Link href={relatedPost.slug}>
                   <div className="relative h-48">

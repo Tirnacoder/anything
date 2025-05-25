@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 px-4 md:px-8">
+    <footer className="bg-background text-foreground py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
           <h3 className="text-xl font-bold mb-4">Music Tech Insider</h3>
@@ -64,8 +64,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-        <p>© {new Date().getFullYear()} DJ Tirna: The Music Tech Insider. All rights reserved.</p>
+      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-border text-center text-muted-foreground text-sm">
+        <p>DJ TIrna All rights reserved</p>
       </div>
     </footer>
   )

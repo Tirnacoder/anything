@@ -1,0 +1,176 @@
+import React from "react"
+import ProductCard from "@/components/product-card"
+import Link from "next/link"
+
+const allProducts = [
+  // Studio Equipment
+  {
+    title: "Universal Audio Apollo Twin X",
+    imageUrl: "/Universal Audio Apollo Twin X.jpg",
+    category: "Audio Interfaces",
+    rating: 4.8,
+    price: 1399,
+    slug: "/blog/universal-audio-apollo-twin-x-review",
+  },
+  {
+    title: "Shure SM7B Microphone",
+    imageUrl: "/shuresm7b.jpg",
+    category: "Microphones",
+    rating: 4.7,
+    price: 399,
+    slug: "/blog/shure-sm7b-microphone-review",
+  },
+  {
+    title: "Genelec 8030C Monitors",
+    imageUrl: "/genelec 8030C.jpg",
+    category: "Studio Monitors",
+    rating: 4.9,
+    price: 1590,
+    slug: "/blog/genelec-8030c-monitors-review",
+  },
+  {
+    title: "Focusrite Scarlett 2i2",
+    imageUrl: "/Focusrite Scarlett 2i2.jpg",
+    category: "Audio Interfaces",
+    rating: 4.6,
+    price: 179,
+    slug: "/blog/focusrite-scarlett-2i2-review",
+  },
+  {
+    title: "Neumann TLM 103 Microphone",
+    imageUrl: "/Neumann TLM 103 Microphone.jpg",
+    category: "Microphones",
+    rating: 4.9,
+    price: 1299,
+    slug: "/blog/neumann-tlm-103-review",
+  },
+  {
+    title: "Avid Pro Tools",
+    imageUrl: "/Avid Pro Tools.png",
+    category: "Software",
+    rating: 4.5,
+    price: 599,
+    slug: "/blog/avid-pro-tools-review",
+  },
+  // Synthesizers
+  {
+    title: "Arturia MiniFreak",
+    imageUrl: "/arturia mini freak.jpg",
+    category: "Digital Synthesizers",
+    rating: 4.8,
+    price: 599,
+    slug: "/blog/arturia-minifreak-review",
+  },
+  {
+    title: "Moog Subsequent 37",
+    imageUrl: "/Moog Subsequent 37.jpg",
+    category: "Analog Synthesizers",
+    rating: 4.9,
+    price: 1799,
+    slug: "/blog/moog-subsequent-37-review",
+  },
+  {
+    title: "Sequential Prophet-6",
+    imageUrl: "/Sequential Prophet-6.jpg",
+    category: "Analog Synthesizers",
+    rating: 4.9,
+    price: 3499,
+    slug: "/blog/sequential-prophet-6-review",
+  },
+  {
+    title: "Korg Minilogue XD",
+    imageUrl: "/Korg Minilogue XD.jpg",
+    category: "Analog Synthesizers",
+    rating: 4.7,
+    price: 649,
+    slug: "/blog/korg-minilogue-xd-review",
+  },
+  {
+    title: "Elektron Digitone",
+    imageUrl: "/Elektron Digitone.jpg",
+    category: "Digital Synthesizers",
+    rating: 4.8,
+    price: 799,
+    slug: "/blog/elektron-digitone-review",
+  },
+  {
+    title: "Behringer Poly D",
+    imageUrl: "/Behringer Poly D.jpg",
+    category: "Analog Synthesizers",
+    rating: 4.5,
+    price: 699,
+    slug: "/blog/behringer-poly-d-review",
+  },
+  // Software
+  {
+    title: "Native Instruments Komplete 15",
+    imageUrl: "/Komplete15.jpeg",
+    category: "Virtual Instruments",
+    rating: 4.9,
+    price: 599,
+    slug: "/blog/native-instruments-komplete-15-review",
+  },
+  {
+    title: "Ableton Live 12",
+    imageUrl: "/abletionpic.webp",
+    category: "DAWs",
+    rating: 4.8,
+    price: 749,
+    slug: "/blog/ableton-live-12-review",
+  },
+  {
+    title: "FabFilter Pro Bundle",
+    imageUrl: "/fabfilter pro.webp",
+    category: "Plugins",
+    rating: 4.9,
+    price: 749,
+    slug: "/blog/fabfilter-pro-bundle-review",
+  },
+  {
+    title: "Spectrasonics Omnisphere 3",
+    imageUrl: "/omnishpere.jpeg",
+    category: "Virtual Instruments",
+    rating: 4.9,
+    price: 499,
+    slug: "/blog/spectrasonics-omnisphere-3-review",
+  },
+  {
+    title: "Logic Pro",
+    imageUrl: "/logic pro.jpeg",
+    category: "DAWs",
+    rating: 4.7,
+    price: 199,
+    slug: "/blog/logic-pro-review",
+  },
+  {
+    title: "Waves Complete Bundle",
+    imageUrl: "/wavescomplete.jpeg",
+    category: "Plugins",
+    rating: 4.6,
+    price: 499,
+    slug: "/blog/waves-complete-bundle-review",
+  },
+]
+
+export default function AllProductsPage() {
+  return (
+    <div className="min-h-screen bg-background py-12 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-bold mb-8 text-foreground">All Products</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allProducts.map((product, index) => (
+            <ProductCard
+              key={index}
+              title={product.title}
+              imageUrl={product.imageUrl}
+              category={product.category}
+              rating={product.rating}
+              price={product.price}
+              slug={product.slug}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -9,7 +9,7 @@ export default function CategoryPill({ name, href }: CategoryPillProps) {
   return (
     <Link
       href={href}
-      className="px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
+      className="px-4 py-2 rounded-full border border-border text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
     >
       {name}
     </Link>

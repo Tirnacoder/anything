@@ -10,7 +10,7 @@ const getCategoryData = (slug: string) => {
     "studio-equipment": {
       title: "Studio Equipment",
       description: "Discover the best audio interfaces, microphones, monitors, and more for your recording studio.",
-      imageUrl: "/images/category-studio.png",
+      imageUrl: "/music studio.avif",
       products: [
         {
           title: "Universal Audio Apollo Twin X",
@@ -72,7 +72,7 @@ const getCategoryData = (slug: string) => {
     synthesizers: {
       title: "Synthesizers",
       description: "Explore the world of analog and digital synthesizers, from vintage classics to modern innovations.",
-      imageUrl: "/images/category-synths.png",
+      imageUrl: "/synthesizers.avif",
       products: [
         {
           title: "Arturia MiniFreak",
@@ -134,11 +134,11 @@ const getCategoryData = (slug: string) => {
     software: {
       title: "Music Software",
       description: "Find the best DAWs, plugins, virtual instruments, and sound libraries for music production.",
-      imageUrl: "/images/category-software.png",
+      imageUrl: "/software.avif",
       products: [
         {
           title: "Native Instruments Komplete 15",
-          imageUrl: "/images/product-2.png",
+          imageUrl: "/Komplete15.jpeg",
           category: "Virtual Instruments",
           rating: 4.9,
           price: 599,
@@ -146,7 +146,7 @@ const getCategoryData = (slug: string) => {
         },
         {
           title: "Ableton Live 12",
-          imageUrl: "/images/product-ableton.png",
+          imageUrl: "/abletionpic.webp",
           category: "DAWs",
           rating: 4.8,
           price: 749,
@@ -154,7 +154,7 @@ const getCategoryData = (slug: string) => {
         },
         {
           title: "FabFilter Pro Bundle",
-          imageUrl: "/images/product-fabfilter.png",
+          imageUrl: "/fabfilter pro.webp",
           category: "Plugins",
           rating: 4.9,
           price: 749,
@@ -162,7 +162,7 @@ const getCategoryData = (slug: string) => {
         },
         {
           title: "Spectrasonics Omnisphere 3",
-          imageUrl: "/images/product-omnisphere.png",
+          imageUrl: "/omnishpere.jpeg",
           category: "Virtual Instruments",
           rating: 4.9,
           price: 499,
@@ -170,7 +170,7 @@ const getCategoryData = (slug: string) => {
         },
         {
           title: "Logic Pro",
-          imageUrl: "/images/product-logic.png",
+          imageUrl: "/logic pro.jpeg",
           category: "DAWs",
           rating: 4.7,
           price: 199,
@@ -178,7 +178,7 @@ const getCategoryData = (slug: string) => {
         },
         {
           title: "Waves Complete Bundle",
-          imageUrl: "/images/product-waves.png",
+          imageUrl: "/wavescomplete.jpeg",
           category: "Plugins",
           rating: 4.6,
           price: 499,
@@ -203,7 +203,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const category = getCategoryData(params.slug)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[300px] md:h-[400px] overflow-hidden">
         <Image
@@ -246,7 +246,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Featured Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+            <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
               <Link href="/blog/best-studio-equipment-2025">
                 <div className="relative h-48">
                   <Image
@@ -266,7 +266,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 </div>
               </Link>
             </article>
-            <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+            <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
               <Link href="/blog/how-to-choose-studio-equipment">
                 <div className="relative h-48">
                   <Image

@@ -30,14 +30,14 @@ export default function ProductCard({ title, imageUrl, category, rating, price, 
 
   return (
     <div
-      className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+      className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
       onClick={handleCardClick}
     >
-      <div className="relative h-48 bg-gray-100">
+      <div className="relative h-48 bg-muted">
         <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-contain p-4" />
       </div>
       <div className="p-4">
-        <span className="text-sm text-gray-500">{category}</span>
+        <span className="text-sm text-muted-foreground">{category}</span>
         <h3 className="text-lg font-semibold mt-1">{title}</h3>
         <div className="flex items-center mt-2">
           <div className="flex items-center">
@@ -49,11 +49,11 @@ export default function ProductCard({ title, imageUrl, category, rating, price, 
               />
             ))}
           </div>
-          <span className="ml-2 text-sm text-gray-600">{rating.toFixed(1)}</span>
+          <span className="ml-2 text-sm text-foreground">{rating.toFixed(1)}</span>
         </div>
         <div className="mt-4 flex items-center justify-between">
-          <span className="font-bold text-lg">${price}</span>
-          <Button asChild variant="outline" size="sm" className="text-black border-black hover:bg-gray-100">
+          <span className="font-bold text-lg text-foreground">${price}</span>
+          <Button asChild variant="outline" size="sm" className="text-foreground border-border hover:bg-muted">
             <Link href={`${slug}#buy`}>
               <ShoppingCart size={16} className="mr-2" />
               View Details

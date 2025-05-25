@@ -116,7 +116,7 @@ export default function SearchPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white py-12 px-4 md:px-8">
+    <div className="min-h-screen bg-background py-12 px-4 md:px-8 text-foreground">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Search Music Tech Insider</h1>
 
@@ -129,7 +129,7 @@ export default function SearchPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
             autoFocus
           />
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
         </div>
 
         <Tabs defaultValue="all" className="mb-8" onValueChange={setActiveTab}>
@@ -145,13 +145,13 @@ export default function SearchPage() {
                 <h2 className="text-2xl font-semibold mb-2">No results found</h2>
                 <p className="text-gray-600 mb-4">Try adjusting your search terms or browse our categories</p>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/studio-equipment">Studio Equipment</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/synthesizers">Synthesizers</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/software">Software</Link>
                   </Button>
                 </div>
@@ -166,7 +166,7 @@ export default function SearchPage() {
                         <Link
                           key={product.id}
                           href={product.slug}
-                          className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition-shadow"
+                          className="flex items-center gap-4 p-4 border border-border bg-card rounded-lg hover:bg-muted hover:shadow-md transition-shadow"
                         >
                           <div className="relative h-16 w-16 flex-shrink-0">
                             <Image
@@ -177,8 +177,8 @@ export default function SearchPage() {
                             />
                           </div>
                           <div>
-                            <h3 className="font-medium">{product.title}</h3>
-                            <p className="text-sm text-gray-500">{product.category}</p>
+                            <h3 className="font-medium text-foreground">{product.title}</h3>
+                            <p className="text-sm text-muted-foreground">{product.category}</p>
                           </div>
                         </Link>
                       ))}
@@ -194,7 +194,7 @@ export default function SearchPage() {
                         <Link
                           key={article.id}
                           href={article.slug}
-                          className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg hover:shadow-md transition-shadow"
+                          className="flex flex-col md:flex-row gap-4 p-4 border border-border bg-card rounded-lg hover:bg-muted hover:shadow-md transition-shadow"
                         >
                           <div className="relative h-40 md:h-auto md:w-40 flex-shrink-0">
                             <Image
@@ -206,11 +206,11 @@ export default function SearchPage() {
                           </div>
                           <div>
                             <div className="flex items-center gap-2 mb-2">
-                              <span className="text-sm text-gray-500">{article.date}</span>
-                              <span className="text-xs px-2 py-1 bg-gray-100 rounded-full">{article.category}</span>
+                              <span className="text-sm text-muted-foreground">{article.date}</span>
+                              <span className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground">{article.category}</span>
                             </div>
                             <h3 className="font-medium mb-2">{article.title}</h3>
-                            <p className="text-sm text-gray-600 line-clamp-2">{article.excerpt}</p>
+                            <p className="text-sm text-muted-foreground line-clamp-2">{article.excerpt}</p>
                           </div>
                         </Link>
                       ))}
@@ -227,13 +227,13 @@ export default function SearchPage() {
                 <h2 className="text-2xl font-semibold mb-2">No products found</h2>
                 <p className="text-gray-600 mb-4">Try adjusting your search terms or browse our product categories</p>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/studio-equipment">Studio Equipment</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/synthesizers">Synthesizers</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-black text-black hover:bg-gray-100">
+                  <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
                     <Link href="/category/software">Software</Link>
                   </Button>
                 </div>
@@ -244,7 +244,7 @@ export default function SearchPage() {
                   <Link
                     key={product.id}
                     href={product.slug}
-                    className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition-shadow"
+                    className="flex items-center gap-4 p-4 border border-border bg-card rounded-lg hover:bg-muted hover:shadow-md transition-shadow"
                   >
                     <div className="relative h-16 w-16 flex-shrink-0">
                       <Image
@@ -255,8 +255,8 @@ export default function SearchPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="font-medium">{product.title}</h3>
-                      <p className="text-sm text-gray-500">{product.category}</p>
+                      <h3 className="font-medium text-foreground">{product.title}</h3>
+                      <p className="text-sm text-muted-foreground">{product.category}</p>
                     </div>
                   </Link>
                 ))}
@@ -279,7 +279,7 @@ export default function SearchPage() {
                   <Link
                     key={article.id}
                     href={article.slug}
-                    className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg hover:shadow-md transition-shadow"
+                    className="flex flex-col md:flex-row gap-4 p-4 border border-border bg-card rounded-lg hover:bg-muted hover:shadow-md transition-shadow"
                   >
                     <div className="relative h-40 md:h-auto md:w-40 flex-shrink-0">
                       <Image
@@ -291,11 +291,11 @@ export default function SearchPage() {
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-sm text-gray-500">{article.date}</span>
-                        <span className="text-xs px-2 py-1 bg-gray-100 rounded-full">{article.category}</span>
+                        <span className="text-sm text-muted-foreground">{article.date}</span>
+                        <span className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground">{article.category}</span>
                       </div>
                       <h3 className="font-medium mb-2">{article.title}</h3>
-                      <p className="text-sm text-gray-600 line-clamp-2">{article.excerpt}</p>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{article.excerpt}</p>
                     </div>
                   </Link>
                 ))}

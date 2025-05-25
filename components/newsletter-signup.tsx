@@ -21,8 +21,8 @@ export default function NewsletterSignup() {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-      <p className="text-gray-300 mb-6 max-w-xl mx-auto">
+      <h2 className="text-3xl font-bold mb-4 text-foreground">Stay Updated</h2>
+      <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
         Subscribe to our newsletter and get the latest music tech news, reviews, and exclusive deals delivered to your
         inbox.
       </p>
@@ -39,18 +39,18 @@ export default function NewsletterSignup() {
             <Input
               type="email"
               placeholder="Your email address"
-              className="pl-10 py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              className="pl-10 py-6 bg-input border-border text-foreground placeholder:text-muted-foreground"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <Button type="submit" className="bg-white text-black hover:bg-gray-200 py-6">
+          <Button type="submit" className="bg-primary text-primary-foreground hover:bg-secondary py-6">
             Subscribe
           </Button>
         </form>
       )}
-      <p className="text-gray-400 text-sm mt-4">
+      <p className="text-muted-foreground text-sm mt-4">
         Plus, get our FREE guide: "Essential Home Studio Gear for Every Budget"
       </p>
     </div>
