@@ -15,9 +15,10 @@ interface ProductCardProps {
   rating: number
   price: number
   slug: string
+  buyLink?: string
 }
 
-export default function ProductCard({ title, imageUrl, category, rating, price, slug }: ProductCardProps) {
+export default function ProductCard({ title, imageUrl, category, rating, price, slug, buyLink }: ProductCardProps) {
   const router = useRouter()
 
   const handleCardClick = (e: React.MouseEvent) => {
@@ -54,9 +55,9 @@ export default function ProductCard({ title, imageUrl, category, rating, price, 
         <div className="mt-4 flex items-center justify-between">
           <span className="font-bold text-lg text-foreground">${price}</span>
           <Button asChild variant="outline" size="sm" className="text-foreground border-border hover:bg-muted">
-            <Link href={`${slug}#buy`}>
+            <Link href={buyLink ? buyLink : `${slug}#buy`} target={buyLink ? "_blank" : "_self"} rel={buyLink ? "noopener noreferrer" : ""}>
               <ShoppingCart size={16} className="mr-2" />
-              View Details
+              Buy
             </Link>
           </Button>
         </div>

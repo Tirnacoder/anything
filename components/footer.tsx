@@ -47,11 +47,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-gray-400 hover:text-white">
-                Contact
-              </Link>
-            </li>
-            <li>
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white">
                 Privacy Policy
               </Link>

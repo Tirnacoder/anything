@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <Button asChild className="bg-primary hover:bg-secondary text-primary-foreground">
-              <Link href="/products">View All Products</Link>
+              <Link href="/products">View All Recommended Products</Link>
             </Button>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function Home() {
           </article>
         </div>
         <div className="text-center mt-8">
-          <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
+          <Button asChild variant="outline" className="border-border text-white hover:bg-muted hover:text-white">
             <Link href="/blog">View All Articles</Link>
           </Button>
         </div>
