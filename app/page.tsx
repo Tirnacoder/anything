@@ -25,14 +25,15 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl">
             Your trusted source for the latest music technology reviews, guides, and insights
           </p>
-          <div className="relative w-full max-w-md">
+          {/* Search bar disabled */}
+          {/* <div className="relative w-full max-w-md">
             <Input
               type="text"
               placeholder="Search for gear, reviews, guides..."
               className="pl-10 pr-4 py-6 rounded-full text-base"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -71,6 +72,7 @@ export default function Home() {
               rating={4.8}
               price={599}
               slug="/blog/arturia-minifreak-review"
+              buyLink="https://www.amazon.com.au/s?k=Arturia+MiniFreak"
             />
             <ProductCard
               title="Native Instruments Komplete 15"
@@ -79,6 +81,7 @@ export default function Home() {
               rating={4.9}
               price={599}
               slug="/blog/native-instruments-komplete-15-review"
+              buyLink="https://www.native-instruments.com/en/products/komplete/bundles/komplete-15/"
             />
             <ProductCard
               title="Shure SM7B Microphone"
@@ -87,6 +90,7 @@ export default function Home() {
               rating={4.7}
               price={399}
               slug="/blog/shure-sm7b-microphone-review"
+              buyLink="https://www.amazon.com.au/s?k=Shure+SM7B+Microphone"
             />
           </div>
           <div className="text-center mt-8">
@@ -102,6 +106,20 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8">Latest Articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+            <Link href="/blog/universal-audio-apollo-twin-x-review">
+              <div className="relative h-48">
+                <Image src="/Universal Audio Apollo Twin X.jpg" alt="Universal Audio Apollo Twin X Review" fill className="object-cover" />
+              </div>
+              <div className="p-4">
+                <span className="text-sm text-muted-foreground">May 25, 2025</span>
+                <h3 className="text-xl font-semibold mt-2">Universal Audio Apollo Twin X Review: The Ultimate Audio Interface for Home Studios</h3>
+                <p className="text-muted-foreground mt-2 line-clamp-3">
+                  Discover why the Universal Audio Apollo Twin X is considered the best audio interface for music production. Explore its features, sound quality, and value for home studios and professionals alike.
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
             <Link href="/blog/top-10-synthesizers-2025">
               <div className="relative h-48">
                 <Image src="/images/article-1.png" alt="Top 10 Synthesizers of 2025" fill className="object-cover" />
@@ -110,23 +128,7 @@ export default function Home() {
                 <span className="text-sm text-muted-foreground">April 20, 2025</span>
                 <h3 className="text-xl font-semibold mt-2">Top 10 Synthesizers of 2025</h3>
                 <p className="text-muted-foreground mt-2 line-clamp-3">
-                  Our comprehensive guide to the best synthesizers on the market this year, from budget-friendly options
-                  to high-end professional gear.
-                </p>
-              </div>
-            </Link>
-          </article>
-          <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
-            <Link href="/blog/home-studio-setup-guide">
-              <div className="relative h-48">
-                <Image src="/images/article-2.png" alt="Home Studio Setup Guide" fill className="object-cover" />
-              </div>
-              <div className="p-4">
-                <span className="text-sm text-muted-foreground">April 18, 2025</span>
-                <h3 className="text-xl font-semibold mt-2">Home Studio Setup Guide: From Beginner to Pro</h3>
-                <p className="text-muted-foreground mt-2 line-clamp-3">
-                  Everything you need to know about setting up your home studio, with recommendations for every budget
-                  level.
+                  Our comprehensive guide to the best synthesizers on the market this year, from budget-friendly options to high-end professional gear.
                 </p>
               </div>
             </Link>
@@ -140,8 +142,7 @@ export default function Home() {
                 <span className="text-sm text-muted-foreground">April 15, 2025</span>
                 <h3 className="text-xl font-semibold mt-2">Ableton Live 12 vs Logic Pro: Which DAW Reigns Supreme?</h3>
                 <p className="text-muted-foreground mt-2 line-clamp-3">
-                  We compare the latest versions of two industry-standard DAWs to help you decide which is right for
-                  your workflow.
+                  We compare the latest versions of two industry-standard DAWs to help you decide which is right for your workflow.
                 </p>
               </div>
             </Link>
@@ -161,41 +162,41 @@ export default function Home() {
           <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
             <Link href="/blog/universal-audio-apollo-twin-x-review">
               <div className="relative h-48">
-                <Image src="/Universal Audio Apollo Twin X.jpg" alt="Apollo Twin X Review" fill className="object-cover" />
+                <Image src="/Universal Audio Apollo Twin X.jpg" alt="Universal Audio Apollo Twin X Review" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <span className="text-sm text-muted-foreground">April 25, 2025</span>
-                <h3 className="text-xl font-semibold mt-2">Universal Audio Apollo Twin X Review</h3>
+                <span className="text-sm text-muted-foreground">May 25, 2025</span>
+                <h3 className="text-xl font-semibold mt-2">Universal Audio Apollo Twin X Review: The Ultimate Audio Interface for Home Studios</h3>
                 <p className="text-muted-foreground mt-2 line-clamp-3">
-                  We test if the Apollo Twin X lives up to the hype with improved AD/DA conversion & DSP power...
+                  Discover why the Universal Audio Apollo Twin X is considered the best audio interface for music production. Explore its features, sound quality, and value for home studios and professionals alike.
                 </p>
               </div>
             </Link>
           </article>
           <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
-            <Link href="/blog/ssl-2-plus-review">
+            <Link href="/blog/top-10-synthesizers-2025">
               <div className="relative h-48">
-                <Image src="/images/related-1.png" alt="SSL 2+ Review" fill className="object-cover" />
+                <Image src="/images/article-1.png" alt="Top 10 Synthesizers of 2025" fill className="object-cover" />
               </div>
               <div className="p-4">
                 <span className="text-sm text-muted-foreground">April 20, 2025</span>
-                <h3 className="text-xl font-semibold mt-2">Solid State Logic SSL 2+ Review</h3>
+                <h3 className="text-xl font-semibold mt-2">Top 10 Synthesizers of 2025</h3>
                 <p className="text-muted-foreground mt-2 line-clamp-3">
-                  Professional sound on a budget with the SSL 2+ interface...
+                  Our comprehensive guide to the best synthesizers on the market this year, from budget-friendly options to high-end professional gear.
                 </p>
               </div>
             </Link>
           </article>
           <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
-            <Link href="/blog/best-audio-interfaces-2025">
+            <Link href="/blog/ableton-live-12-vs-logic-pro">
               <div className="relative h-48">
-                <Image src="/images/related-2.png" alt="Best Interfaces" fill className="object-cover" />
+                <Image src="/abletionpic.webp" alt="Ableton Live 12 vs Logic Pro" fill className="object-cover" />
               </div>
               <div className="p-4">
                 <span className="text-sm text-muted-foreground">April 15, 2025</span>
-                <h3 className="text-xl font-semibold mt-2">Best Audio Interfaces for Home Studios</h3>
+                <h3 className="text-xl font-semibold mt-2">Ableton Live 12 vs Logic Pro: Which DAW Reigns Supreme?</h3>
                 <p className="text-muted-foreground mt-2 line-clamp-3">
-                  Discover the top audio interfaces of 2025 for every budget...
+                  We compare the latest versions of two industry-standard DAWs to help you decide which is right for your workflow.
                 </p>
               </div>
             </Link>

@@ -7,6 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Star, ShoppingCart } from "lucide-react"
+import { useAmazonDomain } from '@/lib/useAmazonDomain'; // import hook to get amazon domain dynamically
 
 interface ProductCardProps {
   title: string
@@ -19,6 +20,13 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ title, imageUrl, category, rating, price, slug, buyLink }: ProductCardProps) {
+  const amazonDomain = useAmazonDomain(); // resolve amazon domain on client
+
+  // Derive final link: if buyLink contains amazon, replace domain dynamically, else keep original
+  const finalBuyLink = buyLink && /amazon\.com/.test(buyLink)
+    ? `https://www.amazon.${amazonDomain}${buyLink.split(/amazon\.com(?:\.au|\.in)?/)[1]}` // preserve path/query
+    : buyLink; // non-amazon URLs unchanged
+
   const router = useRouter()
 
   const handleCardClick = (e: React.MouseEvent) => {
@@ -26,7 +34,8 @@ export default function ProductCard({ title, imageUrl, category, rating, price, 
     if ((e.target as HTMLElement).closest("button") || (e.target as HTMLElement).closest("a")) {
       return
     }
-    router.push(slug)
+    router.push(finalBuyLink ?? `${slug}#buy`) // navigate to dynamic amazon or internal anchor
+    
   }
 
   return (
@@ -55,7 +64,8 @@ export default function ProductCard({ title, imageUrl, category, rating, price, 
         <div className="mt-4 flex items-center justify-between">
           <span className="font-bold text-lg text-foreground">${price}</span>
           <Button asChild variant="outline" size="sm" className="text-foreground border-border hover:bg-muted">
-            <Link href={buyLink ? buyLink : `${slug}#buy`} target={buyLink ? "_blank" : "_self"} rel={buyLink ? "noopener noreferrer" : ""}>
+            {/* Use dynamic finalBuyLink and set target only for amazon domains */}
+            <Link href={finalBuyLink ? finalBuyLink : `${slug}#buy`} target={finalBuyLink && /amazon\./.test(finalBuyLink) ? "_blank" : undefined} rel={finalBuyLink && /amazon\./.test(finalBuyLink) ? "noopener noreferrer" : undefined}>
               <ShoppingCart size={16} className="mr-2" />
               Buy
             </Link>

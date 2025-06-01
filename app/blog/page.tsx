@@ -27,19 +27,9 @@ const blogPosts = [
     slug: "top-10-synthesizers-2025",
     featured: false
   },
+
   {
     id: 3,
-    title: "Home Studio Setup Guide: From Beginner to Pro",
-    excerpt: "Everything you need to know about setting up your home studio, with recommendations for every budget level.",
-    category: "Studio Equipment",
-    date: "April 18, 2025",
-    author: "DJ TIrna",
-    imageUrl: "/images/article-2.png",
-    slug: "home-studio-setup-guide",
-    featured: false
-  },
-  {
-    id: 4,
     title: "Ableton Live 12 vs Logic Pro: Which DAW Reigns Supreme?",
     excerpt: "We compare the latest versions of two industry-standard DAWs to help you decide which is right for your workflow.",
     category: "Software",
@@ -49,28 +39,7 @@ const blogPosts = [
     slug: "ableton-live-12-vs-logic-pro",
     featured: false
   },
-  {
-    id: 5,
-    title: "Solid State Logic SSL 2+ Review",
-    excerpt: "Professional sound on a budget with the SSL 2+ interface. Is this the perfect entry-level pro audio interface?",
-    category: "Studio Equipment",
-    date: "April 10, 2025",
-    author: "DJ TIrna",
-    imageUrl: "/images/related-1.png",
-    slug: "ssl-2-plus-review",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "Best Audio Interfaces for Home Studios in 2025",
-    excerpt: "Discover the top audio interfaces of 2025 for every budget. From entry-level to professional grade equipment.",
-    category: "Studio Equipment",
-    date: "April 5, 2025",
-    author: "DJ TIrna",
-    imageUrl: "/images/related-2.png",
-    slug: "best-audio-interfaces-2025",
-    featured: false
-  }
+  
 ]
 
 const categories = ["All", "Studio Equipment", "Synthesizers", "Software", "DJ Equipment"]

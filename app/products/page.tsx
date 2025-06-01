@@ -11,6 +11,7 @@ const allProducts = [
     rating: 4.8,
     price: 1399,
     slug: "/blog/universal-audio-apollo-twin-x-review",
+    buyLink: "https://www.amazon.com.au/s?k=Universal+Audio+Apollo+Twin+X",
   },
   {
     title: "Shure SM7B Microphone",
@@ -19,6 +20,7 @@ const allProducts = [
     rating: 4.7,
     price: 399,
     slug: "/blog/shure-sm7b-microphone-review",
+    buyLink: "https://www.amazon.com.au/s?k=Shure+SM7B+Microphone",
   },
   {
     title: "Genelec 8030C Monitors",
@@ -27,6 +29,7 @@ const allProducts = [
     rating: 4.9,
     price: 1590,
     slug: "/blog/genelec-8030c-monitors-review",
+    buyLink: "https://www.amazon.com.au/s?k=Genelec+8030C+Studio+Monitors",
   },
   {
     title: "Focusrite Scarlett 2i2",
@@ -35,6 +38,7 @@ const allProducts = [
     rating: 4.6,
     price: 179,
     slug: "/blog/focusrite-scarlett-2i2-review",
+    buyLink: "https://www.amazon.com.au/s?k=Focusrite+Scarlett+2i2",
   },
   {
     title: "Neumann TLM 103 Microphone",
@@ -43,6 +47,7 @@ const allProducts = [
     rating: 4.9,
     price: 1299,
     slug: "/blog/neumann-tlm-103-review",
+    buyLink: "https://swamp.net.au/search?q=Neumann+TLM+103",
   },
   {
     title: "Avid Pro Tools",
@@ -51,6 +56,7 @@ const allProducts = [
     rating: 4.5,
     price: 599,
     slug: "/blog/avid-pro-tools-review",
+    buyLink: "https://www.amazon.com.au/s?k=Avid+Pro+Tools",
   },
   // Synthesizers
   {
@@ -60,6 +66,7 @@ const allProducts = [
     rating: 4.8,
     price: 599,
     slug: "/blog/arturia-minifreak-review",
+    buyLink: "https://www.amazon.com.au/s?k=Arturia+MiniFreak",
   },
   {
     title: "Moog Subsequent 37",
@@ -68,6 +75,7 @@ const allProducts = [
     rating: 4.9,
     price: 1799,
     slug: "/blog/moog-subsequent-37-review",
+    buyLink: "https://www.amazon.com.au/s?k=Moog+Subsequent+37",
   },
   {
     title: "Sequential Prophet-6",
@@ -76,6 +84,7 @@ const allProducts = [
     rating: 4.9,
     price: 3499,
     slug: "/blog/sequential-prophet-6-review",
+    buyLink: "https://swamp.net.au/search?q=Sequential+Prophet+6",
   },
   {
     title: "Korg Minilogue XD",
@@ -84,6 +93,7 @@ const allProducts = [
     rating: 4.7,
     price: 649,
     slug: "/blog/korg-minilogue-xd-review",
+    buyLink: "https://www.amazon.com.au/s?k=Korg+Minilogue+XD",
   },
   {
     title: "Elektron Digitone",
@@ -92,6 +102,7 @@ const allProducts = [
     rating: 4.8,
     price: 799,
     slug: "/blog/elektron-digitone-review",
+    buyLink: "https://swamp.net.au/search?q=Elektron+Digitone",
   },
   {
     title: "Behringer Poly D",
@@ -100,6 +111,7 @@ const allProducts = [
     rating: 4.5,
     price: 699,
     slug: "/blog/behringer-poly-d-review",
+    buyLink: "https://www.amazon.com.au/s?k=Behringer+Poly+D",
   },
   // Software
   {
@@ -109,6 +121,7 @@ const allProducts = [
     rating: 4.9,
     price: 599,
     slug: "/blog/native-instruments-komplete-15-review",
+    buyLink: "https://www.native-instruments.com/en/products/komplete/bundles/komplete-15/",
   },
   {
     title: "Ableton Live 12",
@@ -117,6 +130,7 @@ const allProducts = [
     rating: 4.8,
     price: 749,
     slug: "/blog/ableton-live-12-review",
+    buyLink: "https://www.ableton.com/en/live/",
   },
   {
     title: "FabFilter Pro Bundle",
@@ -125,6 +139,7 @@ const allProducts = [
     rating: 4.9,
     price: 749,
     slug: "/blog/fabfilter-pro-bundle-review",
+    buyLink: "https://www.fabfilter.com/shop",
   },
   {
     title: "Spectrasonics Omnisphere 3",
@@ -133,6 +148,7 @@ const allProducts = [
     rating: 4.9,
     price: 499,
     slug: "/blog/spectrasonics-omnisphere-3-review",
+    buyLink: "https://www.spectrasonics.net/products/omnisphere/",
   },
   {
     title: "Logic Pro",
@@ -141,6 +157,7 @@ const allProducts = [
     rating: 4.7,
     price: 199,
     slug: "/blog/logic-pro-review",
+    buyLink: "https://apps.apple.com/us/app/logic-pro/id634148309",
   },
   {
     title: "Waves Complete Bundle",
@@ -149,6 +166,7 @@ const allProducts = [
     rating: 4.6,
     price: 499,
     slug: "/blog/waves-complete-bundle-review",
+    buyLink: "https://www.waves.com/bundles/waves-complete",
   },
 ]
 
@@ -167,6 +185,7 @@ export default function AllProductsPage() {
               rating={product.rating}
               price={product.price}
               slug={product.slug}
+              buyLink={product.buyLink}
             />
           ))}
         </div>

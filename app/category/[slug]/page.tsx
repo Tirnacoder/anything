@@ -264,45 +264,60 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       <section className="py-12 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Featured Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
-              <Link href="/blog/best-studio-equipment-2025">
+              <Link href="/blog/universal-audio-apollo-twin-x-review">
                 <div className="relative h-48">
                   <Image
-                    src="/images/article-featured-1.png"
-                    alt="Best Studio Equipment of 2025"
+                    src="/Universal Audio Apollo Twin X.jpg"
+                    alt="Universal Audio Apollo Twin X Review"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <span className="text-sm text-gray-500">April 22, 2025</span>
-                  <h3 className="text-xl font-semibold mt-2">Best {category.title} of 2025: Our Top Picks</h3>
+                  <span className="text-sm text-gray-500">May 25, 2025</span>
+                  <h3 className="text-xl font-semibold mt-2">Universal Audio Apollo Twin X Review: The Ultimate Audio Interface for Home Studios</h3>
                   <p className="text-gray-600 mt-2 line-clamp-3">
-                    Our comprehensive guide to the best {category.title.toLowerCase()} on the market this year, from
-                    budget-friendly options to high-end professional gear.
+                    Discover why the Universal Audio Apollo Twin X is considered the best audio interface for music production. Explore its features, sound quality, and value for home studios and professionals alike.
                   </p>
                 </div>
               </Link>
             </article>
             <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
-              <Link href="/blog/how-to-choose-studio-equipment">
+              <Link href="/blog/top-10-synthesizers-2025">
                 <div className="relative h-48">
                   <Image
-                    src="/images/article-featured-2.png"
-                    alt="How to Choose the Right Studio Equipment"
+                    src="/images/article-1.png"
+                    alt="Top 10 Synthesizers of 2025"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <span className="text-sm text-gray-500">April 18, 2025</span>
-                  <h3 className="text-xl font-semibold mt-2">
-                    How to Choose the Right {category.title}: A Buyer's Guide
-                  </h3>
+                  <span className="text-sm text-gray-500">April 20, 2025</span>
+                  <h3 className="text-xl font-semibold mt-2">Top 10 Synthesizers of 2025</h3>
                   <p className="text-gray-600 mt-2 line-clamp-3">
-                    Everything you need to know before investing in {category.title.toLowerCase()}, with recommendations
-                    for every budget level.
+                    Our comprehensive guide to the best synthesizers on the market this year, from budget-friendly options to high-end professional gear.
+                  </p>
+                </div>
+              </Link>
+            </article>
+            <article className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+              <Link href="/blog/ableton-live-12-vs-logic-pro">
+                <div className="relative h-48">
+                  <Image
+                    src="/abletionpic.webp"
+                    alt="Ableton Live 12 vs Logic Pro"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <span className="text-sm text-gray-500">April 15, 2025</span>
+                  <h3 className="text-xl font-semibold mt-2">Ableton Live 12 vs Logic Pro: Which DAW Reigns Supreme?</h3>
+                  <p className="text-gray-600 mt-2 line-clamp-3">
+                    We compare the latest versions of two industry-standard DAWs to help you decide which is right for your workflow.
                   </p>
                 </div>
               </Link>
